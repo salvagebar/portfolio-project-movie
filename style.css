@@ -1,8 +1,3 @@
-/**
-*** SIMPLE GRID
-*** (C) ZACH COLE 2016
-**/
-
 @import url(https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic);
 
 /* UNIVERSAL */
@@ -53,7 +48,7 @@ h6 {
 }
 
 p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 200;
   line-height: 1.8;
 }
@@ -250,4 +245,24 @@ p {
     width: 75%;
     max-width: 60rem;
   }
+}
+
+/* OTHER CSS STYLING */
+
+header {
+  text-align: center;
+}
+
+.fav-movie {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.fav-movie img {
+  height: 250px;
+}
+
+.welcome-blurb {
+  padding: 10% 0;
 }
