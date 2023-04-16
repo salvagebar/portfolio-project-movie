@@ -16,11 +16,28 @@
         </header>
       </div>
       <div class="row">
-        <div class="col-12">
-            <div class="movie-search">
-                
-            </div>
+        <div class="col-12 movie-form-container">
+          <form id="movie-input">
+            <label
+              >Search for a movie
+              <input
+                id="movie"
+                name="movie"
+                type="text"
+                placeholder="Enter a film title"
+                required
+              />
+            </label>
+            <button id="movie-submit" name="movie-submit" type="submit">
+              Search
+            </button>
+            <p id="warning">WARNING</p>
+          </form>
         </div>
+      </div>
+      <div class="row">
+        <div class="col-8" id="movie-info">Searched movie info here</div>
+        <div class="col-4" id="movie-poster">Searched movie poster here</div>
       </div>
       <div class="row">
         <div class="col-8">

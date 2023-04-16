@@ -253,6 +253,12 @@ header {
   text-align: center;
 }
 
+.movie-form-container {
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
 .fav-movie {
   text-align: center;
   align-items: center;
@@ -260,7 +266,7 @@ header {
 }
 
 .fav-movie img {
-  height: 250px;
+  height: 500px;
 }
 
 .welcome-blurb {
