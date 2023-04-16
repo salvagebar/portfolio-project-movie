@@ -16,7 +16,7 @@ fetch(faveUrl)
 movieSearch.addEventListener("submit", (event) => {
   // submitting the weather search form
   event.preventDefault(); // preventing the form from reloading the page
-  if (warned) {
+  if (warned) { // clearing the warning line on a new search
     warningLine.innerText = "";
     warned = false;
   }
@@ -24,13 +24,15 @@ movieSearch.addEventListener("submit", (event) => {
   let searchText = document.getElementById("movie").value; // what the user inputs
   document.getElementById("movie").value = ""; // clearing the search box
   if (searchText) {
-    let baseURL = `http://www.omdbapi.com/?t=` + searchText + `&apikey=82153485`; // forming a proper URL
+    let baseURL =
+      `http://www.omdbapi.com/?t=` + searchText + `&apikey=82153485`; // forming a proper URL
 
     fetch(baseURL)
       .then((response) => {
         return response.json();
       })
       .then((json) => {
+        fillMoviePoster(json);
         console.log(json);
       });
   } else {
@@ -39,3 +41,7 @@ movieSearch.addEventListener("submit", (event) => {
     warned = true;
   }
 });
+
+const fillMoviePoster = (json) => {
+searchedMoviePoster.innerHTML = `<img src="${json.Poster}" title="${json.Title}" alt="${json.Title}"></img>`
+}
