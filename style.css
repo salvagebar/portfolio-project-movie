@@ -272,3 +272,9 @@ header {
 .welcome-blurb {
   padding: 10% 0;
 }
+
+#warning {
+  background-color: antiquewhite;
+  color: red;
+  font-family: monospace;
+}
